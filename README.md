@@ -15,7 +15,7 @@ More futures are coming.
 #### As a root:
 
 	$ zypper in icecast ices
-	$ ln -s icecast.xml /etc/icecast.xml
+	$ ln -s `pwd`/icecast.xml /etc/icecast.xml	
 	$ systemctl restart icecast
 
 #### Play example radio:

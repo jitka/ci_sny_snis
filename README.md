@@ -10,23 +10,29 @@ Hra vznikla na larpworkshopu v roce 2016.
 There is simple streaming example.
 More futures are coming. 
 
-### Server install
+#### Dependences
 
-#### As a root:
+	$ sudo zypper in icecast ices mpd ncmpc
 
-	$ zypper in icecast ices
-	$ ln -s `pwd`/icecast.xml /etc/icecast.xml	
-	$ systemctl restart icecast
-
-#### Play example radio:
+#### Play example radio
 	$ ices ices-playlist.xml
+
+#### Generate mpd configs
+	$ ./mpd_config_generator.sh
+
+#### Play and stop player radio
+	$ mpd mpd.player1.conf
+	$ mpd mpd.player2.conf --kill
+
+#### Player radio control
+	$ ncmpc -p 6601
 
 ### Mobile aplication
 [ArmAmp](https://play.google.com/store/apps/details?id=com.armamp)
 
 Choose Add from menu in right top corner.
 
-Insert URL http://10.0.0.4:8000/player1.ogg
+Insert URL http://10.0.0.4:8000/player1
 
 NOTE ip address could be different, works only in local network
 

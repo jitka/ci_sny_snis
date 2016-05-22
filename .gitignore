@@ -1,2 +1,4 @@
 *.ogg
 .*swp
+logs/*
+mpd.player*

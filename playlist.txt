@@ -1,11 +1,1 @@
-/home/jitka/git/ci_sny_snis/ACDC_-_Back_In_Black-sample.ogg
-/home/jitka/git/ci_sny_snis/ACDC_-_Back_In_Black-sample.ogg
-/home/jitka/git/ci_sny_snis/ACDC_-_Back_In_Black-sample.ogg
-/home/jitka/git/ci_sny_snis/ACDC_-_Back_In_Black-sample.ogg
-/home/jitka/git/ci_sny_snis/ACDC_-_Back_In_Black-sample.ogg
-/home/jitka/git/ci_sny_snis/ACDC_-_Back_In_Black-sample.ogg
-/home/jitka/git/ci_sny_snis/ACDC_-_Back_In_Black-sample.ogg
-/home/jitka/git/ci_sny_snis/ACDC_-_Back_In_Black-sample.ogg
-/home/jitka/git/ci_sny_snis/ACDC_-_Back_In_Black-sample.ogg
-/home/jitka/git/ci_sny_snis/ACDC_-_Back_In_Black-sample.ogg
-/home/jitka/git/ci_sny_snis/ACDC_-_Back_In_Black-sample.ogg
+/home/jitka/git/ci_sny_snis/music/ACDC_-_Back_In_Black-sample.ogg

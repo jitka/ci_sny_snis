@@ -58,8 +58,8 @@
                 the source password and mountpoint.  -->
             <hostname>localhost</hostname>
             <port>8000</port>
-            <password>thando</password>
-            <mount>/player1.ogg</mount>
+            <password>hackme</password>
+            <mount>/player1</mount>
 
             <!-- Reconnect parameters:
                 When something goes wrong (e.g. the server crashes, or the

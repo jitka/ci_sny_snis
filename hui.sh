@@ -46,6 +46,13 @@ do
 done
 }
 
+TODO
+
+-p 6601 crop
+jitka@kren:~/git/ci_sny_snis $ mpc -p 6601 ls Final | mpc -p 6601 add
+jitka@kren:~/git/ci_sny_snis $ mpc -p 6601 play 2 
+
+
 function ncmpc {
 #printf "--tab -e \"ncmpc -p 660%s\" " {1..6}
 gnome-terminal --tab -e "ncmpc -p 6601" --tab -e "ncmpc -p 6602" --tab -e "ncmpc -p 6603" --tab -e "ncmpc -p 6604" --tab -e "ncmpc -p 6605" --tab -e "ncmpc -p 6606"

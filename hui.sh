@@ -28,6 +28,7 @@ function run {
 for i in {1..6}; 
 do
     mpd mpd.player$i.conf
+    mpc -p 660$i ls Final | mpc -p 660$i add
 done
 }
 
@@ -56,7 +57,7 @@ case $1 in
         generate
         ;;
 	run)
-		echo "Running mpd."
+		echo "Running mpd and adding playlist."
         run
 		;;
     stop)
@@ -77,6 +78,7 @@ case $1 in
         run
         stop
         ncmpc
+        update
         "
 		;;
 esac

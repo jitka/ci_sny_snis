@@ -21,8 +21,9 @@ More futures are coming.
 	$ ./mpd_config_generator.sh
 
 #### Play and stop player radio
-	$ mpd_run.sh
-	$ mpd mpd.player2.conf --kill
+	# systemctl start icecast
+	$ ./mpd_run.sh
+	$ ./mpd_stop.sh
 
 #### Player radio control
 	$ ncmpc -p 6601

@@ -21,7 +21,7 @@ More futures are coming.
 	$ ./mpd_config_generator.sh
 
 #### Play and stop player radio
-	$ mpd mpd.player1.conf
+	$ mpd_run.sh
 	$ mpd mpd.player2.conf --kill
 
 #### Player radio control

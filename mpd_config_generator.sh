@@ -16,7 +16,7 @@ audio_output {
 	port		\"8000\"
 	mount		\"/player$i\"
 	password	\"hackme\"
-	quality		\"10.0\"
+	quality		\"10.0\" #higher quailty mean also shorter ping
 	format		\"44100:16:1\"
 }
 

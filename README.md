@@ -18,15 +18,15 @@ More futures are coming.
 	$ ices ices-playlist.xml
 
 #### Generate mpd configs
-	$ ./mpd_config_generator.sh
+	$ ./hui.sh generate
 
 #### Play and stop player radio
 	# systemctl start icecast
-	$ ./mpd_run.sh
-	$ ./mpd_stop.sh
+	$ ./hui.sh run
+	$ ./hui.sh stop 
 
 #### Player radio control
-	$ ncmpc -p 6601
+	$ ./hui.sh ncmpc
 
 ### Mobile aplication
 [ArmAmp](https://play.google.com/store/apps/details?id=com.armamp)

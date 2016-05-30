@@ -25,43 +25,51 @@ done
 }
 
 function run {
-mpd mpd.player1.conf
-mpd mpd.player2.conf
-mpd mpd.player3.conf
-mpd mpd.player4.conf
-mpd mpd.player5.conf
-mpd mpd.player6.conf
+for i in {1..6}; 
+do
+    mpd mpd.player$i.conf
+done
 }
 
 function stop {
-mpd mpd.player1.conf --kill
-mpd mpd.player2.conf --kill
-mpd mpd.player3.conf --kill
-mpd mpd.player4.conf --kill
-mpd mpd.player5.conf --kill
-mpd mpd.player6.conf --kill
+for i in {1..6}; 
+do
+    mpd mpd.player$i.conf --kill
+done
+}
+
+function update {
+for i in {1..6}; 
+do
+    mpc update -p 660$i
+done
 }
 
 function ncmpc {
+#printf "--tab -e \"ncmpc -p 660%s\" " {1..6}
 gnome-terminal --tab -e "ncmpc -p 6601" --tab -e "ncmpc -p 6602" --tab -e "ncmpc -p 6603" --tab -e "ncmpc -p 6604" --tab -e "ncmpc -p 6605" --tab -e "ncmpc -p 6606"
 }
 
 case $1 in
     generate)
-        echo "generating mpd configs"
+        echo "Generating mpd configs."
         generate
         ;;
 	run)
-		echo "running mpd"
+		echo "Running mpd."
         run
 		;;
     stop)
-        echo "stopping mpd"
+        echo "Stopping mpd."
         stop
         ;;
     ncmpc)
-        echo "running gnome-terminal with ncmpc tabs"
+        echo "Running gnome-terminal with ncmpc tabs."
         ncmpc
+        ;;
+    update)
+        echo "Updating mpd databases."
+        update
         ;;
 	*)
 		echo "usage:

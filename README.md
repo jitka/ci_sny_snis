@@ -12,13 +12,16 @@ More futures are coming.
 
 #### Dependences
 
-	$ sudo zypper in icecast ices mpd ncmpc
+	$ sudo zypper in icecast ices mpd mpc ncmpc
 
 #### Play example radio
 	$ ices ices-playlist.xml
 
 #### Generate mpd configs
 	$ ./hui.sh generate
+
+#### Add music to music folder and update mpd
+    $ ./hui.sh update
 
 #### Play and stop player radio
 	# systemctl start icecast

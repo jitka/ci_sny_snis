@@ -28,9 +28,42 @@ function run {
 for i in {1..6}; 
 do
     mpd mpd.player$i.conf
-    mpc -p 660$i ls Final | mpc -p 660$i add
+    mpc -p 660$i ls | mpc -p 660$i add
+    mpc -p 660$i play
 done
 }
+
+function add {
+for i in {1..6}; 
+do
+    mpc -p 660$i ls | mpc -p 660$i add
+done
+}
+
+function workshop {
+for i in {1..6}; 
+do
+    mpc -p 660$i crop
+    mpc -p 660$i add Workshop.mp3
+    mpc -p 660$i play 2
+done
+}
+
+function scene () {
+for i in {1..6}; 
+do
+    mpc -p 660$i crop
+    mpc -p 660$i add scenes/scene$1-player$i.mp3
+    mpc -p 660$i add emotions/
+    mpc -p 660$i play 2
+done
+}
+
+
+#-p 6601 crop
+#jitka@kren:~/git/ci_sny_snis $ mpc -p 6601 ls Final | mpc -p 6601 add
+#jitka@kren:~/git/ci_sny_snis $ mpc -p 6601 play 2 
+
 
 function stop {
 for i in {1..6}; 
@@ -45,12 +78,6 @@ do
     mpc update -p 660$i
 done
 }
-
-TODO
-
--p 6601 crop
-jitka@kren:~/git/ci_sny_snis $ mpc -p 6601 ls Final | mpc -p 6601 add
-jitka@kren:~/git/ci_sny_snis $ mpc -p 6601 play 2 
 
 
 function ncmpc {
@@ -79,6 +106,18 @@ case $1 in
         echo "Updating mpd databases."
         update
         ;;
+    add)
+        echo "Adding all music to playlist."
+        add
+        ;;
+    workshop)
+        echo "Workshop."
+        workshop
+        ;;
+    scene)
+        echo "Scene $2."
+        scene $2
+        ;;
 	*)
 		echo "usage:
         generate
@@ -86,6 +125,7 @@ case $1 in
         stop
         ncmpc
         update
+        all
         "
 		;;
 esac

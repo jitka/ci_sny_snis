@@ -43,8 +43,8 @@ for i in {1..6};
 do
     mpc -p 660$i crop
     mpc -p 660$i add story/scene$1-player$i.mp3
-    mpc -p 660$i add scene$1
     mpc -p 660$i add emotions/
+    mpc -p 660$i add scene$1 #TODO jen pro scenu 7
     mpc -p 660$i play 2
 done
 }
